@@ -368,3 +368,21 @@
 .remove-image-btn:hover {
   background-color: #e74c3c; /* Vermelho */
 }
+.delete-btn {
+  border: none;
+  padding: 0.5rem 1rem;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #c0392b; /* Vermelho mais escuro */
+  transition: opacity 0.3s;
+}
+
+.delete-btn:hover {
+  opacity: 0.8;
+}
+
+/* Ajuste no espaçamento dos botões de ação */
+.testimonial-manage-item .actions {
+  flex-shrink: 0; /* Impede que os botões quebrem a linha em telas menores */
+}
