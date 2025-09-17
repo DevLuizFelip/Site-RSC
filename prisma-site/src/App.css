@@ -65,7 +65,7 @@ body {
 /* === HEADER === */
 .header {
   background-color: var(--white); /* Cor de fundo branca para o cabeçalho */
-  padding: 0rem 2rem; /* Um padding geral para o cabeçalho */
+  padding: 0.5rem 2rem; /* Um padding geral para o cabeçalho */
   display: flex;
   justify-content: space-between; /* Alinha logo à esquerda e navegação à direita */
   align-items: center; /* Centraliza verticalmente os itens */
@@ -81,7 +81,7 @@ body {
   line-height: 1; /* Ajuda a eliminar espaço extra vertical */
 }
 .logo-img {
-  height: 150px; /* Ajuste a altura desejada para sua logo */
+  height: 45px; /* Ajuste a altura desejada para sua logo */
   width: auto;  /* Mantém a proporção da imagem */
   display: block; /* Garante que a imagem se comporte como um bloco */
   vertical-align: middle; /* Ajuda a alinhar verticalmente se for o caso */

@@ -4,7 +4,7 @@ function Header() {
   return (
     <header className="header">
       <Link to="/" className="logo">
-      <img src="/public/rsc-iconHeader.png" alt="RSC & Engenharia Logo" className="logo-img" />
+      <img src="/public/rsc-logo.png" alt="RSC & Engenharia Logo" className="logo-img" />
       </Link>
       <nav className="nav">
         <Link to="/">Home</Link> 
