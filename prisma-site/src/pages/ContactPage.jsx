@@ -33,9 +33,9 @@ function ContactPage() {
           <h3>Informações de Contato</h3>
           <p>Entre em contato conosco por qualquer um dos canais abaixo ou preencha o formulário ao lado.</p>
           <ul className="contact-list">
-            <li><FaMapMarkerAlt /> <span>Patos de Minas, MG</span></li>
-            <li><FaPhone /> <span>(34) 99999-9999</span></li>
-            <li><FaEnvelope /> <span>contato@prisma.com.br</span></li>
+            <li><FaMapMarkerAlt /> <span>São Paulo, SP</span></li>
+            <li><FaPhone /> <span>(11) 99648-4696</span></li>
+            <li><FaEnvelope /> <span>rsceng@outlook.com</span></li>
           </ul>
         </div>
         <div className="contact-form-wrapper">
