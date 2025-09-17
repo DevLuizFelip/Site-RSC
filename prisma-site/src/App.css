@@ -64,21 +64,29 @@ body {
 
 /* === HEADER === */
 .header {
-  background-color: var(--white);
-  padding: 1rem 2rem;
-  display: flex; /* <-- ATIVA O FLEXBOX */
-  justify-content: space-between; /* <-- JOGA O LOGO PARA UM LADO E OS LINKS PARA O OUTRO */
-  align-items: center; /* <-- ALINHA TUDO VERTICALMENTE NO CENTRO */
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  background-color: var(--white); /* Cor de fundo branca para o cabeçalho */
+  padding: 0rem 2rem; /* Um padding geral para o cabeçalho */
+  display: flex;
+  justify-content: space-between; /* Alinha logo à esquerda e navegação à direita */
+  align-items: center; /* Centraliza verticalmente os itens */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra sutil para destaque */
 }
+
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--primary-color);
-  text-decoration: none;
+  display: flex; /* Garante que a imagem dentro dele seja tratada como um item flexível */
+  align-items: center; /* Ajuda no alinhamento vertical da imagem */
+  height: auto; /* Permite que a imagem defina a altura, se desejar */
+  padding: 0; /* Remove qualquer padding padrão que possa ter */
+  margin: 0; /* Remove qualquer margin padrão que possa ter */
+  line-height: 1; /* Ajuda a eliminar espaço extra vertical */
+}
+.logo-img {
+  height: 150px; /* Ajuste a altura desejada para sua logo */
+  width: auto;  /* Mantém a proporção da imagem */
+  display: block; /* Garante que a imagem se comporte como um bloco */
+  vertical-align: middle; /* Ajuda a alinhar verticalmente se for o caso */
+  margin: 0; /* Remove qualquer margin padrão */
+  padding: 0; /* Remove qualquer padding padrão */
 }
 
 .nav a {
@@ -548,3 +556,4 @@ body {
   margin-top: 0;
   text-align: center;
 }
+

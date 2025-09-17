@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 function Header() {
   return (
     <header className="header">
-      <Link to="/" className="logo">RSC&ENGENHARIA</Link>
+      <Link to="/" className="logo">
+      <img src="/public/rsc-iconHeader.png" alt="RSC & Engenharia Logo" className="logo-img" />
+      </Link>
       <nav className="nav">
-        <Link to="/">Home</Link>
+        <Link to="/">Home</Link> 
         <Link to="/sobre">O Escritório</Link>
         <Link to="/servicos">Serviços</Link>
         <Link to="/projetos">Projetos</Link>
