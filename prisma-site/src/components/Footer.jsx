@@ -8,7 +8,7 @@ function Footer() {
     <footer className="footer">
       <div className="container footer-content">
         <div className="footer-about">
-          <h3 className="logo">PRISMA</h3>
+          <h3 className="logo">RSC&ENGENHARIA</h3>
           <p>Arquitetura e Engenharia Integradas. Transformando ideias em realidade.</p>
         </div>
         <div className="footer-links">
@@ -30,7 +30,7 @@ function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Prisma - Arquitetura & Engenharia. Todos os direitos reservados.</p>
+        <p>&copy; {new Date().getFullYear()} RSC&ENGENHARIA - Arquitetura & Engenharia. Todos os direitos reservados.</p>
       </div>
     </footer>
   );
