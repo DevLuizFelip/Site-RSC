@@ -19,13 +19,13 @@ function HomePage() {
       <section className="hero-section">
         <div className="hero-overlay"></div>
         <div className="container hero-content">
-          <h1>Arquitetura e Engenharia Integradas</h1>
+          <h1>Soluções em Engenharia</h1>
           <p>Projetamos e construímos o futuro, unindo criatividade e precisão técnica para entregar resultados excepcionais.</p>
           <Link to="/projetos" className="btn btn-primary">Conheça Nossos Projetos</Link>
           <div className="hero-stats">
             <div className="stat">
-              <strong>+15k</strong>
-              <span>m² construídos</span>
+              <strong>+20</strong>
+              <span>Anos de experiência</span>
             </div>
             <div className="stat">
               <strong>+280</strong>
@@ -45,6 +45,11 @@ function HomePage() {
         <p className="section-subtitle">Oferecemos uma gama completa de soluções para atender a todas as etapas do seu projeto.</p>
         <div className="services-grid">
           <ServiceCard 
+            icon={<FaHardHat />} 
+            title="Gestão de Obras" 
+            description="Acompanhamento e supervisão completa da construção, do planejamento à entrega, assegurando qualidade e cumprimento de prazos." 
+          />
+          <ServiceCard 
             icon={<FaDraftingCompass />} 
             title="Projetos Arquitetônicos" 
             description="Criação de projetos residenciais, comerciais e industriais com foco em design, funcionalidade e aproveitamento de espaço." 
@@ -54,11 +59,7 @@ function HomePage() {
             title="Cálculo Estrutural" 
             description="Análise e dimensionamento de estruturas em concreto armado e metálicas, garantindo segurança e otimização de materiais." 
           />
-          <ServiceCard 
-            icon={<FaHardHat />} 
-            title="Gestão de Obras" 
-            description="Acompanhamento e supervisão completa da construção, do planejamento à entrega, assegurando qualidade e cumprimento de prazos." 
-          />
+          
         </div>
       </section>
 

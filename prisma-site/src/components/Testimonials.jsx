@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
-import { supabase } from '../supabaseClient'; // Importe o Supabase
+import { supabase } from '../supabaseClient'; 
+import { FaStar } from 'react-icons/fa';
 
 function Testimonials() {
   const [testimonials, setTestimonials] = useState([]);
@@ -40,7 +41,20 @@ function Testimonials() {
         <h2 className="section-title">O Que Nossos Clientes Dizem</h2>
         <Slider {...settings}>
           {testimonials.map((testimonial) => (
+            
             <div key={testimonial.id} className="testimonial-card">
+              <div className="testimonial-stars">
+                  {[...Array(5)].map((star, index) => {
+                    const ratingValue = index + 1;
+                    return (
+                      <FaStar
+                        key={index}
+                        size={20}
+                        color={ratingValue <= testimonial.rating ? "#ffc107" : "#e4e5e9"}
+                      />
+                    );
+                  })}
+                </div> 
               <p className="quote">"{testimonial.quote}"</p>
               <p className="author">{testimonial.name}</p>
               <p className="company">{testimonial.company_or_project}</p>
