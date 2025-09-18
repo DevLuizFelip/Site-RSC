@@ -556,4 +556,174 @@ body {
   margin-top: 0;
   text-align: center;
 }
+/* === ESTILOS DO MENU HAMBÚRGUER E RESPONSIVIDADE DO HEADER === */
+
+/* O botão hambúrguer (inicialmente escondido em telas grandes) */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1100; /* Para ficar na frente do menu */
+}
+
+/* A Media Query é a chave da responsividade.
+   As regras aqui dentro só se aplicam se a tela for de 768px de largura ou menor */
+@media (max-width: 768px) {
+  /* Mostra o botão hambúrguer */
+  .hamburger-btn {
+    display: block;
+  }
+.header {
+    /* Pode ser necessário ajustar a altura do header para que o padding abaixo funcione.
+       Se a logo ou links fazem o header ficar mais alto que 60px, você precisa
+       aumentar o padding-top do hero-content. */
+    padding: 0.8rem 1rem; /* Ajusta o padding do header para mobile, se necessário */
+  }
+  /* Esconde a navegação de desktop */
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    
+    /* Esconde o menu fora da tela por padrão */
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  /* Quando o menu está aberto, ele desliza para dentro da tela */
+  .nav.nav-open {
+    transform: translateX(0);
+  }
+
+  /* Estilo dos links no menu mobile */
+  .nav a {
+    margin-left: 0;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+  }
+  .stat strong {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.stat span {
+  font-size: 0.7rem;
+  opacity: 0.9;
+}
+   /* Reduz o tamanho das fontes nos títulos */
+  .hero-content h1 {
+     font-size: 2.5rem; /* Ajuste o tamanho da fonte para mobile se necessário */
+    line-height: 1;
+    margin-bottom: 1rem;
+    color: var(--white);
+  }
+  .hero-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    color: var(--white); /* Garante que o texto seja branco ou visível */
+  }
+  .hero-content .primary-button {
+    margin: 0 auto; /* Centraliza o botão se ele for um elemento de bloco */
+    display: block; /* Garante que o margin: auto funcione */
+  }
+  .hero-content {
+     padding: 80px 1.5rem 2rem 1.5rem; /* Aumenta o padding-top e adiciona laterais/fundo */
+    text-align: center; 
+  }
+  .hero-content.container { /* <-- ADICIONE .container AQUI PARA MAIOR ESPECIFICIDADE */
+    /* Assumindo que seu header tenha cerca de 70-80px de altura */
+    padding-top: 200px !important; /* <-- AUMENTE UM POUCO E MANTENHA O !important */
+    padding-bottom: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    text-align: center;
+  }
+
+  .container {
+    padding-top: 0; 
+    padding-bottom: 3rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .hero-stats {
+    position: relative; /* Garante que o z-index funcione se precisar */
+    margin-top: 0.5rem; /* Adiciona uma margem superior para separar do botão */
+    padding-bottom:2rem; /* Adiciona um padding inferior se o background blur estiver nele */
+  }
+
+  .hero-stats .stat-item h3 {
+    font-size: 1rem; /* Ajuste o tamanho do número */
+  }
+   .hero-stats .stat-item p {
+    font-size: 0.5rem; /* Ajuste o tamanho da descrição */
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+
+  /* Ajusta o padding geral para dar mais espaço */
+  .container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  /* Faz as grades de serviços e projetos terem apenas UMA coluna */
+  .services-grid, .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Faz o layout da página de contato empilhar verticalmente */
+  .contact-layout {
+    flex-direction: column;
+  }
+  .services-section {
+    margin-top: 3rem; /* Adiciona uma margem superior para separar da seção anterior */
+    padding-top: 3rem; /* Garante que o conteúdo não cole no topo da seção */
+  }
+   .container {
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+}
+
+
+.hero-section {
+  position: relative;
+  /* Remova qualquer height: fixa ou min-height: fixa que esteja aqui.
+     Se houver, mude para min-height: 100vh ou min-height: auto. */
+  min-height: 80vh; /* Exemplo: pelo menos 80% da altura da tela */
+  display: flex;
+  flex-direction: column; /* Para empilhar hero-content e hero-stats */
+  justify-content: center; /* Centraliza verticalmente o conteúdo */
+  align-items: center; /* Centraliza horizontalmente o conteúdo */
+  text-align: center; /* Centraliza o texto */
+  padding-bottom: 4rem; /* Um padding generoso na parte inferior da seção do hero */
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Para ficar atrás do conteúdo */
+}
 
