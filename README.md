@@ -121,5 +121,5 @@ Abra um Pull Request.
 📝 Licença
 Este projeto está sob a licença MIT.
 
-📞 Contato
+
 Luiz Felipe - https://github.com/DevLuizFelip - https://linkedin.com/in/luizcostasantana
